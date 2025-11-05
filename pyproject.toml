@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trading_account"
+description = "Libraries to connect to stock brokerage in Vietnam market"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Thai Doan", email = "thai.doan@datx.com.vn" }]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version"]
+packages = ["trading_account"]
+dependencies = [
+    "requests",
+    "mysql-connector-python",
+    "sqlalchemy"
+]
+
+[project.urls]
+"Homepage" = "https://git.datx.com.vn/datx-trading-platform/copy-trading/brokerage-connector"
+
+[tool.hatch.version]
+path = "__about__.py"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
